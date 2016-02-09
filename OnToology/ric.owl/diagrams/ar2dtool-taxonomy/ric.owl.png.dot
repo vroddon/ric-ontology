@@ -1,11 +1,8 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:FlightIncident" "base:TerritorialApplicability" "base:ServiceIncident" "base:BaggageIncident" "base:Requite" "base:AirTransportPassengerIncident" "base:BaggageLiability" ; /*classes style*/
-	"base:ServiceIncident" -> "base:AirTransportPassengerIncident" [ label = "rdfs:subClassOf" ];
-	"base:FlightIncident" -> "base:AirTransportPassengerIncident" [ label = "rdfs:subClassOf" ];
-	"base:BaggageIncident" -> "base:AirTransportPassengerIncident" [ label = "rdfs:subClassOf" ];
-	"base:BaggageLiability" -> "base:Requite" [ label = "rdfs:subClassOf" ];
-	"base:TerritorialApplicability" -> "base:Requite" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "ric:BaggageLiability" "ric:TerritorialApplicability" "ric:Requisite" ; /*classes style*/
+	"ric:TerritorialApplicability" -> "ric:Requisite" [ label = "rdfs:subClassOf" ];
+	"ric:BaggageLiability" -> "ric:Requisite" [ label = "rdfs:subClassOf" ];
 
 }
