@@ -7,18 +7,27 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+
 @base <https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#> .
 
 <https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#> rdf:type owl:Ontology ;
                                                                            owl:versionInfo "1.0.2" ;
                                                                            dct:creator "Cristiana Santos" ;
                                                                            dct:title "Ontology of Relevant Legal Information in Consumer Disputes"@en ;
+                                                                           dc:title "Ontology of Relevant Legal Information in Consumer Disputes"@en ;
                                                                            dct:language "en" ;
-                                                                           dct:contibutor "Pompeu Casanovas" ,
+                                                                           dct:contributor "Pompeu Casanovas" ,
                                                                                           "Victor Rodriguez" ;
                                                                            dct:rights "This ontology is distributed under a Creative Commons CC-BY 4.0 license - https://creativecommons.org/licenses/by/4.0/" ;
-                                                                           dct:date "2016-01-28" ;
+                                                                           dct:date "2016-01-28" ;	
+																		   dct:created "2016-01-28" ;
+																		   vann:preferredNamespacePrefix "ric";				
+																		   vann:preferredNamespaceUri "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#"; 													
+																			rdfs:comment "This ontology is a framework for representing relevant, legal information in a domain-neutral manner" ;
+																			dc:description "This ontology is a framework for representing relevant, legal information in a domain-neutral manner";
                                                                            dct:license <http://creativecommons.org/licenses/by/4.0/> .
 
 #################################################################
