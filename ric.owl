@@ -28,6 +28,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#">
+        <dc:description>This ontology is a framework for representing relevant, legal information in a domain-neutral manner...</dc:description>
         <vann:preferredNamespaceUri>https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#</vann:preferredNamespaceUri>
         <dct:language>en</dct:language>
         <dct:contributor>Victor Rodriguez</dct:contributor>
@@ -35,13 +36,11 @@
         <dct:rights>This ontology is distributed under a Creative Commons CC-BY 4.0 license - https://creativecommons.org/licenses/by/4.0/</dct:rights>
         <dct:contributor>Pompeu Casanovas</dct:contributor>
         <rdfs:comment>This ontology is a framework for representing relevant, legal information in a domain-neutral manner</rdfs:comment>
-        <dc:description>This ontology is a framework for representing relevant, legal information in a domain-neutral manner</dc:description>
         <dct:created>2016-01-28</dct:created>
         <dct:date>2016-01-28</dct:date>
         <owl:versionInfo>1.0.2</owl:versionInfo>
         <dct:creator>Cristiana Santos</dct:creator>
         <dct:title xml:lang="en">Ontology of Relevant Legal Information in Consumer Disputes</dct:title>
-        <dc:title xml:lang="en">Ontology of Relevant Legal Information in Consumer Disputes</dc:title>
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
     </owl:Ontology>
     

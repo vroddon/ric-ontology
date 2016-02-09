@@ -16,7 +16,6 @@
                                                                            owl:versionInfo "1.0.2" ;
                                                                            dct:creator "Cristiana Santos" ;
                                                                            dct:title "Ontology of Relevant Legal Information in Consumer Disputes"@en ;
-                                                                           dc:title "Ontology of Relevant Legal Information in Consumer Disputes"@en ;
                                                                            dct:language "en" ;
                                                                            dct:contributor "Pompeu Casanovas" ,
                                                                                           "Victor Rodriguez" ;
@@ -26,7 +25,7 @@
 																		   vann:preferredNamespacePrefix "ric";				
 																		   vann:preferredNamespaceUri "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#"; 													
 																			rdfs:comment "This ontology is a framework for representing relevant, legal information in a domain-neutral manner" ;
-																			dc:description "This ontology is a framework for representing relevant, legal information in a domain-neutral manner";
+																			dc:description "This ontology is a framework for representing relevant, legal information in a domain-neutral manner...";
                                                                            dct:license <http://creativecommons.org/licenses/by/4.0/> .
 
 #################################################################
