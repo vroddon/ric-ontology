@@ -1,0 +1,18 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Right" "base:Exception" "base:LegalSource" "base:EnforcementProcedure" "base:Passenger" "base:Constraint" "base:Requite" "base:AirTransportPassengerIncident" ; /*classes style*/
+	"base:hasTypeOfIncident" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
+	"base:hasException" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"base:Passenger" -> "base:EnforcementProcedure" [ label = "base:followsProcedure" ];
+	"base:Right" -> "base:Requite" [ label = "base:hasRequisite" ];
+	"base:Passenger" -> "base:Right" [ label = "base:isEntitledTo" ];
+	"base:AirTransportPassengerIncident" -> "owl:Thing" [ label = "base:hasTypeOfIncident" ];
+	"base:Right" -> "base:LegalSource" [ label = "base:hasLegalSource" ];
+	"base:Right" -> "base:Constraint" [ label = "base:hasConstraint" ];
+	"base:Right" -> "base:Exception" [ label = "base:hasException" ];
+	"base:AirTransportPassengerIncident" -> "base:Right" [ label = "base:mayTrigger" ];
+	"base:Right" -> "base:EnforcementProcedure" [ label = "base:hasEnforcementProcedure" ];
+
+}
