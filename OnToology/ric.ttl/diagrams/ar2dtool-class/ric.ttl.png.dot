@@ -1,18 +1,18 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:Requisite" "base:Right" "base:Exception" "base:LegalSource" "base:Incident" "base:EnforcementProcedure" "base:Constraint" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "ric:Exception" "ric:Right" "ric:Constraint" "ric:LegalSource" "ric:Requisite" "ric:Incident" "ric:EnforcementProcedure" ; /*classes style*/
 	"ric:" -> "http://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
-	"base:hasTypeOfIncident" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
-	"base:hasException" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
-	"base:Incident" -> "prov:Activity" [ label = "skos:closeMatch" ];
-	"base:Right" -> "base:Constraint" [ label = "base:subjectTo" ];
-	"base:Right" -> "base:Requisite" [ label = "base:hasRequisite" ];
-	"base:Constraint" -> "base:LegalSource" [ label = "base:hasLegalSource" ];
-	"base:Incident" -> "owl:Thing" [ label = "base:hasTypeOfIncident" ];
-	"base:Right" -> "base:Constraint" [ label = "base:hasConstraint" ];
-	"base:Right" -> "base:Exception" [ label = "base:hasException" ];
-	"base:Incident" -> "base:Right" [ label = "base:mayTrigger" ];
-	"base:Right" -> "base:EnforcementProcedure" [ label = "base:hasEnforcementProcedure" ];
+	"ric:hasException" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ric:hasTypeOfIncident" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ric:Incident" -> "prov:Activity" [ label = "skos:closeMatch" ];
+	"ric:Constraint" -> "ric:LegalSource" [ label = "ric:hasLegalSource" ];
+	"ric:Right" -> "ric:Requisite" [ label = "ric:hasRequisite" ];
+	"ric:Right" -> "ric:EnforcementProcedure" [ label = "ric:hasEnforcementProcedure" ];
+	"ric:Right" -> "ric:Constraint" [ label = "ric:subjectTo" ];
+	"ric:Right" -> "ric:Exception" [ label = "ric:hasException" ];
+	"ric:Incident" -> "ric:Right" [ label = "ric:mayTrigger" ];
+	"ric:Incident" -> "owl:Thing" [ label = "ric:hasTypeOfIncident" ];
+	"ric:Right" -> "ric:Constraint" [ label = "ric:hasConstraint" ];
 
 }
