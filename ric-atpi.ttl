@@ -89,6 +89,10 @@
 :CancelledFlight rdf:type owl:Class ;
                  
                  rdfs:subClassOf :FlightIncident ;
+				 
+				 rdfs:label "Flight Incident"@en ;
+
+				 rdfs:label "Incidente de vuelo"@es ;
                  
                  rdfs:comment """Means the non-operation of a flight which was previously planned and on which at least one place was reserved, Article(2)(l) (EC) Regulation 261/2004. 
 
