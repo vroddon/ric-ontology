@@ -54,13 +54,16 @@
 
 
 :hasLegalSource rdf:type owl:ObjectProperty ;
-                rdfs:domain :Constraint ,
-                            :EnforcementProcedure ,
-                            :Exception ,
-                            :FurtherInterpretation ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :EnforcementProcedure
+                                              :Exception
+											  :FurtherInterpretation
+											  :Right
+											  :Requisite
+                                            )
+                              ] ;
                 rdfs:range :LegalSource ;
-                rdfs:domain :Requisite ,
-                            :Right .
+				skos:closeMatch dct:source .
 
 
 :hasRequisite rdf:type owl:ObjectProperty ;
@@ -74,19 +77,21 @@
                    rdfs:subPropertyOf owl:topObjectProperty .
 
 
-:mayTrigger rdf:type owl:ObjectProperty ;
-            rdfs:domain :Incident ;
-            rdfs:range :Right .
+:isTriggeredBy rdf:type owl:ObjectProperty ;
+            rdfs:range :Incident ;
+            rdfs:domain :Right .
 
 
 
 
 :subjectTo rdf:type owl:ObjectProperty ;
            
-           rdfs:range :Constraint ,
-                      :Exception ,
-                      :FurtherInterpretation ,
-                      :Requisite ;
+                  rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( :Constraint
+                                              :Exception
+											  :FurtherInterpretation
+                                            )
+                              ] ;		   
            
            rdfs:domain :Right .
 

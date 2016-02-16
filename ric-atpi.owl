@@ -5,7 +5,6 @@
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY ric "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl" >
@@ -17,21 +16,20 @@
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ric="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#">
         <rdfs:label>RIC-ATPI Ontology</rdfs:label>
-        <rdfs:comment>Ontology of Relevant Legal Information in Consumer Disputes for the Air Transport Passenger Incidents</rdfs:comment>
-        <owl:versionInfo>1.0.2</owl:versionInfo>
-        <dct:date>2016-01-28</dct:date>
-        <dct:rights>This ontology is distributed under a Creative Commons CC-BY 4.0 license - https://creativecommons.org/licenses/by/4.0/</dct:rights>
-        <dct:language>en</dct:language>
-        <dct:title>RIC-ATPI Ontology</dct:title>
         <dct:creator>Cristiana Santos</dct:creator>
         <dct:contibutor>Pompeu Casanovas</dct:contibutor>
         <dct:contibutor>Victor Rodriguez</dct:contibutor>
+        <dct:rights>This ontology is distributed under a Creative Commons CC-BY 4.0 license - https://creativecommons.org/licenses/by/4.0/</dct:rights>
+        <dct:title>RIC-ATPI Ontology</dct:title>
+        <rdfs:comment>Ontology of Relevant Legal Information in Consumer Disputes for the Air Transport Passenger Incidents</rdfs:comment>
+        <dct:language>en</dct:language>
+        <dct:date>2016-01-28</dct:date>
+        <owl:versionInfo>1.0.2</owl:versionInfo>
         <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     </owl:Ontology>
     
@@ -48,10 +46,10 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlhappensIn -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#happensIn -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlhappensIn">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#happensIn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#AirTransportPassengerIncident"/>
     </owl:ObjectProperty>
     
 
@@ -67,36 +65,36 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#AirTransportPassengerIncident -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#AirTransportPassengerIncident">
         <rdfs:comment>Incident related to the air transport passenger domain</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBaggageIncident -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BaggageIncident -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBaggageIncident">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BaggageIncident">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#AirTransportPassengerIncident"/>
         <rdfs:comment>Incident related to  mishandled baggage, which was lost, delayed, destroyed or damaged</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBankrupcyIncident -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BankrupcyIncident -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBankrupcyIncident">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFlightIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BankrupcyIncident">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FlightIncident"/>
         <rdfs:comment>When an air carrier has insufficient assets to meet all debts, or being unable to pay debts as and when they are due, Council Regulation  (EC) No 1346/2000 of 29 May 2000 on insolvency proceedings</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlCancelledFlight -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#CancelledFlight -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlCancelledFlight">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFlightIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#CancelledFlight">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FlightIncident"/>
         <rdfs:comment>Means the non-operation of a flight which was previously planned and on which at least one place was reserved, Article(2)(l) (EC) Regulation 261/2004. 
 
 Broader interpretation from the Court : ‘cancellation’ as meaning that is does not refer exclusively to the situation in which the aeroplane in question fails to take off at all. That concept also covers the case in which an aeroplane took off but, for whatever reason, was subsequently forced to return to the airport of departure where its passengers were transferred to other flights, Aurora Sousa Rodríguez and Others v Air France SA, Judgment in Case C-83/10, 13/10/2011</rdfs:comment>
@@ -104,151 +102,151 @@ Broader interpretation from the Court : ‘cancellation’ as meaning that is do
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlCustomerServiceInsatisfaction -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#CustomerServiceInsatisfaction -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlCustomerServiceInsatisfaction">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlServiceIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#CustomerServiceInsatisfaction">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ServiceIncident"/>
         <rdfs:comment>When the passenger was not satisfied with the customer service provided by the air carrier in relation to the purchase of a service up to the point of delivery of the service.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDamagedBagagge -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DamagedBagagge -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDamagedBagagge">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBaggageIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DamagedBagagge">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BaggageIncident"/>
         <rdfs:comment>Physical damage to baggage and/or its contents. IATA PSCRM, Reso780</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedBaggage -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedBaggage -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedBaggage">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBaggageIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedBaggage">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BaggageIncident"/>
         <rdfs:comment>A piece(s) of baggage which fails to arrive at the airport of destination on the same flight as the passenger, but is subsequently delivered. IATA PSCRM, Reso780</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedFlight -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedFlight -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedFlight">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFlightIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedFlight">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FlightIncident"/>
         <rdfs:comment>When an operating air carrier reasonably expects a flight to be delayed beyond its scheduled time, Article 6 Regulation 261/2004</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDeniedFlight -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DeniedFlight -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDeniedFlight">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFlightIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DeniedFlight">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FlightIncident"/>
         <rdfs:comment>Denied Flight or denied boarding means a refusal to carry passengers on a flight, although they have presented themselves for boarding under the conditions laid down in Article 3(2), except where there are reasonable grounds to deny them boarding, such as reasons of health, safety or security, or inadequate travel documentation, Article (2)(j) Regulation (EC) 261/2004.                                                                                                                                                                                                                                                                                                    Broader interpretation from the CJEU: &quot; the concept of ‘denied boarding’ relates not only to cases of overbooking, denied boarding covers all circumstances in which an air carrier refuses to carry a passenger, such as those concerning other grounds, such as operational reasons&quot;, German Rodriguez Cachafeiro, Maria de los Reyes Martinez-Reboredo Varela-Villamor v Iberia Lineas Aereas de Espana SA, Case C-321/11, 04/10/2012,  and C-22/11 (Finnair Oyj vs. Timy Lassooy)</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDestroyedBagagge -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DestroyedBagagge -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDestroyedBagagge">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBaggageIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DestroyedBagagge">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BaggageIncident"/>
         <rdfs:comment>A baggage which became unusable</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDowngrading -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Downgrading -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDowngrading">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlSeatMisplacement"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Downgrading">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#SeatMisplacement"/>
         <rdfs:comment>When an operating air carrier places a passenger in a class lower than that for which the ticket was purchased,Article 10 (2)  Regulation 261/2004</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlEvent -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Event -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlEvent"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Event"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFlightIncident -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FlightIncident -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFlightIncident">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FlightIncident">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#AirTransportPassengerIncident"/>
         <rdfs:comment>Incident related to the provision of the flight</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFollowingDayDelayDeparture -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FollowingDayDelayDeparture -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlFollowingDayDelayDeparture">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedFlight"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#FollowingDayDelayDeparture">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedFlight"/>
         <rdfs:comment>When the reasonably expected time of departure is at least the day after the time of departure previously announced, Art. 6 (1) (ii) EC Regulation 261/2004</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlIrresponsiveness -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Irresponsiveness -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlIrresponsiveness">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlServiceIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Irresponsiveness">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ServiceIncident"/>
         <rdfs:comment>Incident related to the difficulties in getting information from the air carrier on where and how to complain and on claim redress (e.g. no phone number, no email or all telephone lines busy, no response to the complaint).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlLongDelayedAtArrival -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#LongDelayedAtArrival -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlLongDelayedAtArrival">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedFlight"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#LongDelayedAtArrival">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedFlight"/>
         <rdfs:comment>Interpretation from the CJEU: When an operating air carrier  reach their final destination three hours or more after the scheduled arrival time (originally scheduled by the air carrier), Joined Cases C-402/07 (Sturgeon vs. Condor Flugdienst GmbH) and C-432/07 (Böck/Lepuschitz vs. Air France); Joined Cases C-581/10 Nelson and Others v Deutsche Lufthansa AG and C-629/10 Tui Travel, British Airways, EasyJet, IATA vs. Civil Aviation Authority</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlLongDelayedAtDeparture -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#LongDelayedAtDeparture -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlLongDelayedAtDeparture">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedFlight"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#LongDelayedAtDeparture">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedFlight"/>
         <rdfs:comment>When an operating air carrier reasonably expects a flight to be delayed at departure at least five hours or more, Art. 6 (1) (iii) (EC) Regulation 261/2004</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlLostBaggage -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#LostBaggage -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlLostBaggage">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlBaggageIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#LostBaggage">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#BaggageIncident"/>
         <rdfs:comment>A piece(s) of baggage which is irretrievably lost. IATA PSCRM, Reso780</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlSeatMisplacement -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#SeatMisplacement -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlSeatMisplacement">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlServiceIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#SeatMisplacement">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ServiceIncident"/>
         <rdfs:comment>When an operating air carrier misplaces a passenger in a class different than that for which the ticket was purchased.Article 10  Regulation 261/2004</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlServiceIncident -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ServiceIncident -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlServiceIncident">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ServiceIncident">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#AirTransportPassengerIncident"/>
         <rdfs:comment>Incident related to the quality of the service</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlShortDelayedAtDeparture -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ShortDelayedAtDeparture -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlShortDelayedAtDeparture">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlDelayedFlight"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ShortDelayedAtDeparture">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#DelayedFlight"/>
         <rdfs:comment>When an operating air carrier reasonably expects a flight to be delayed beyond its scheduled time of departure,  
 
 (a) for two hours or more in the case of flights of 1 500 kilometres
@@ -263,28 +261,28 @@ Article 6 (1) (EC) Regulation 261/2004</rdfs:comment>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlUnfairCommercialPractices -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#UnfairCommercialPractices -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlUnfairCommercialPractices">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlServiceIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#UnfairCommercialPractices">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ServiceIncident"/>
         <rdfs:comment>Commercial practices which are unhonest practises; misleading commercial practices (such as false claims, deceiving information or leaving out important information that would affect the consumer decision to buy something); and aggressive sales techniques that harass the consumer into buying something under pressure, Article 5 of the Directive 2005/29/EC of 11 May 2005 concerning unfair business-to-consumer commercial practices in the internal market.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlUnfairContractTerms -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#UnfairContractTerms -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlUnfairContractTerms">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlServiceIncident"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#UnfairContractTerms">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#ServiceIncident"/>
         <rdfs:comment>A contractual term shall be regarded as unfair if, contrary to the requirement of good faith, it causes a significant  imbalance in the parties&apos; rights and obligations arising under the contract, to the detriment of the consumer, Article 3 (1) Directive of Unfair Contract terms 93/ 13/EEC</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlUpgrading -->
+    <!-- https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Upgrading -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlUpgrading">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlSeatMisplacement"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#Upgrading">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#SeatMisplacement"/>
         <rdfs:comment>When an operating air carrier places a passenger in a class higher than that for which the ticket was purchased, Article 10 (1)  Regulation 261/2004</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
