@@ -1,8 +1,8 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident" ; /*classes style*/
-	"https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
-	"https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident" -> "owl:Thing" [ label = "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlhappensIn" ];
+node [shape = rectangle, color="orange"]; "base:AirTransportPassengerIncident" ; /*classes style*/
+	"base:" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
+	"base:AirTransportPassengerIncident" -> "owl:Thing" [ label = "base:happensIn" ];
 
 }
