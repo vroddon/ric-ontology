@@ -7,18 +7,18 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY ric "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl" >
+    <!ENTITY ric "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#"
      xml:base="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:ric="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl">
+     xmlns:ric="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl#">
         <rdfs:label>RIC-ATPI Ontology</rdfs:label>
         <dct:creator>Cristiana Santos</dct:creator>
