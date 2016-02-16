@@ -105,6 +105,8 @@ Broader interpretation from the Court : ‘cancellation’ as meaning that is do
 :CustomerServiceInsatisfaction rdf:type owl:Class ;
                                
                                rdfs:subClassOf :ServiceIncident ;
+							   
+							   rdfs:label "Customer Service Insatisfaction"@en ;
                                
                                rdfs:comment "When the passenger was not satisfied with the customer service provided by the air carrier in relation to the purchase of a service up to the point of delivery of the service." .
 
@@ -135,6 +137,11 @@ Broader interpretation from the Court : ‘cancellation’ as meaning that is do
 :DelayedFlight rdf:type owl:Class ;
                
                rdfs:subClassOf :FlightIncident ;
+			   
+  			   rdfs:label "Delayed Flight"@en ;
+
+			   rdfs:label "Vuelo restrasado"@es ;
+
                
                rdfs:comment "When an operating air carrier reasonably expects a flight to be delayed beyond its scheduled time, Article 6 Regulation 261/2004" .
 
@@ -303,8 +310,90 @@ Article 6 (1) (EC) Regulation 261/2004""" .
            
            rdfs:comment "When an operating air carrier places a passenger in a class higher than that for which the ticket was purchased, Article 10 (1)  Regulation 261/2004" .
 
+		   
+#### MANUAL EDITED DOCUMENT ##################################################################################		   
+		   
+		   
+# LEGAL SOURCES
+:regulation261art31 rdf:type ric:LegalSource , owl:NamedIndividual ;
+        rdfs:label "Regulation 261/2004, Art. 3(1)"@en .		   
 
+:regulation261art31b rdf:type ric:LegalSource , owl:NamedIndividual ;
+        rdfs:label "Regulation 261/2004, Art. 3(1)b"@en .		   
 
+:regulation261rec18 rdf:type ric:LegalSource , owl:NamedIndividual ;
+        rdfs:label "Regulation 261/2004, Recital 18"@en .		   
+
+:regulation261rec20 rdf:type ric:LegalSource , owl:NamedIndividual ;
+        rdfs:label "Regulation 261/2004, Recital 20"@en .		   
+		
+:regulation261art52 rdf:type ric:LegalSource , owl:NamedIndividual ;
+        rdfs:label "Regulation 261/2004, Art. 5(2)"@en .		   
+		
+:regulation261art142 rdf:type ric:LegalSource , owl:NamedIndividual ;
+        rdfs:label "Regulation 261/2004, Art. 14(2)"@en .		   
+		
+		
+# INCIDENTS AS INDIVIDUALS		   
+:cancelledflight rdf:type :CancelledFlight , owl:NamedIndividual ;
+        rdfs:label "Cancelled Flight"@en .
+
+# RIGHTS AS INDIVIDUALS
+:righttoinformation rdf:type ric:Right , owl:NamedIndividual ;
+        rdfs:label "Right to Information"@en .
+
+:righttocommunications rdf:type ric:Right , owl:NamedIndividual ;
+        rdfs:label "Right to Communications"@en .
+		   
+:righttomeals rdf:type ric:Right , owl:NamedIndividual ;
+        rdfs:label "Right to Meals and Refreshments"@en .
+		   
+:righttoreimbursementorrerouting rdf:type ric:Right , owl:NamedIndividual ;
+        rdfs:label "Right to Rerouting or reinbursement"@en .
+
+# REQUISITES
+:territorialapplication rdf:type ric:Requisite , owl:NamedIndividual ;
+		rdfs:label "Territorial application"@en ;
+        rdfs:comment "The rights apply to worldwide airlines and passengers when departing from an airport within EU, and also to all departing from an airport in a third country to a destination within the EU, where the operating air carrier is a Community air carrier (EU airline)"@en ;
+		ric:hasLegalSource :regulation261art31 .
+
+# CONSTRAINTS		
+:limitationcare rdf:type ric:Constraint , owl:NamedIndividual ;
+		rdfs:label "Limitation to the right of care"@en ;
+        rdfs:comment "Care for passengers awaiting an alternative or a delayed flight may be limited or declined if the provision of the care would itself cause further delay."@en ;
+		ric:hasLegalSource :regulation261rec18 .
+
+:limitationcare2 rdf:type ric:Constraint , owl:NamedIndividual ;
+		rdfs:label "Limitation to the right of care"@en ;
+        rdfs:comment "If a third country airport authority provides assistance on a flight incident to passengers (in the form of vouchers or accommodation in the third country),  this preclude passenger from claiming further assistance (availing  the rights) under the Regulation, from the airline concerned."@en ;
+		ric:hasLegalSource :regulation261art31b .
+		
+# FURTHER INTERPRETATION
+:fullyinformed rdf:type ric:FurtherInterpretation , owl:NamedIndividual ;
+		rdfs:label "Full information"@en ;
+        rdfs:comment "Passengers should be fully informed of their rights in the event of denied boarding and of cancellation or long delay of flights, so that they can effectively exercise their rights"@en ;
+		ric:hasLegalSource :regulation261rec20 .
+
+:writtennotice rdf:type ric:FurtherInterpretation , owl:NamedIndividual ;
+		rdfs:label "Written notice"@en ;
+        rdfs:comment "An operating air carrier denying boarding or cancelling a flight shall provide each passenger affected with a written notice setting out the rules for compensation and assistance in line with this Regulation. It shall also provide each passenger affected by a delay of at least two hours with an equivalent notice. The contact details of the national designated body referred to in Article 16 shall also be given to the passenger in written form"@en ;
+		ric:hasLegalSource :regulation261art142 .
+
+# ENFORCEMENT PROCEDURE
+:complainthandling rdf:type ric:EnforcementProcedure , owl:NamedIndividual ;
+		rdfs:label "Complaint handling Procedure"@en ;
+        rdfs:comment "To issue the complaint, a standard complaint format should be used. The complaint may be pursued against the air carrier and also submitted to the NEB. Copies of the proof documents should be presented in annex to the complaint to confirm the narrated facts to sustain the redress request ((copies of the original receipts, such as boarding pass, receipts of the expenses)"@en ;
+		rdfs:seeAlso <http://ec.europa.eu/transport/themes/passengers/air/doc/complain_form/eu_complaint_form_en.pdf> .
+		
+# INCIDENTS TRIGGERING RIGHTS		   
+:righttoinformation ric:isTriggeredBy  :cancelledflight ;
+					ric:hasLegalSource :regulation261art52, :regulation261art142 ;
+					ric:subjectTo :territorialapplication, :limitationcare, :limitationcare2 ;
+					ric:subjectTo :fullyinformed, :writtennotice ;
+					ric:hasEnforcementProcedure :complainthandling .
+
+		   
 
 ###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+
 
