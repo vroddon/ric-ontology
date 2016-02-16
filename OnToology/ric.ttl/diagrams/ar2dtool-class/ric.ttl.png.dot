@@ -1,18 +1,34 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:Requisite" "base:Right" "base:Exception" "base:LegalSource" "base:Incident" "base:EnforcementProcedure" "base:Constraint" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "ric:Exception" "ric:Right" "d270ecb51827887036bc07beabf01920" "ric:Constraint" "ric:LegalSource" "a63921574fd88e29be53a872a23b6d3d" "ric:Requisite" "ric:Incident" "ric:EnforcementProcedure" "ric:FurtherInterpretation" ; /*classes style*/
 	"ric:" -> "http://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
-	"base:hasTypeOfIncident" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
-	"base:hasException" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
-	"base:Incident" -> "prov:Activity" [ label = "skos:closeMatch" ];
-	"base:Right" -> "base:Constraint" [ label = "base:subjectTo" ];
-	"base:Right" -> "base:Requisite" [ label = "base:hasRequisite" ];
-	"base:Constraint" -> "base:LegalSource" [ label = "base:hasLegalSource" ];
-	"base:Incident" -> "owl:Thing" [ label = "base:hasTypeOfIncident" ];
-	"base:Right" -> "base:Constraint" [ label = "base:hasConstraint" ];
-	"base:Right" -> "base:Exception" [ label = "base:hasException" ];
-	"base:Incident" -> "base:Right" [ label = "base:mayTrigger" ];
-	"base:Right" -> "base:EnforcementProcedure" [ label = "base:hasEnforcementProcedure" ];
+	"ric:hasException" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ric:hasLegalSource" -> "dct:source" [ label = "skos:closeMatch" ];
+	"ric:hasTypeOfIncident" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ric:Incident" -> "prov:Activity" [ label = "skos:closeMatch" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "ric:Right" [ label = "rdf:first" ];
+	"NULL" -> "ric:Requisite" [ label = "rdf:first" ];
+	"NULL" -> "ric:FurtherInterpretation" [ label = "rdf:first" ];
+	"NULL" -> "ric:Exception" [ label = "rdf:first" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "ric:EnforcementProcedure" [ label = "rdf:first" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ff7" [ label = "owl:unionOf" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ffc" [ label = "owl:unionOf" ];
+	"NULL" -> "ric:Constraint" [ label = "rdf:first" ];
+	"NULL" -> "-3814ad17:152e9daab5d:-7ffa" [ label = "rdf:rest" ];
+	"d270ecb51827887036bc07beabf01920" -> "ric:LegalSource" [ label = "ric:hasLegalSource" ];
+	"ric:Right" -> "ric:Requisite" [ label = "ric:hasRequisite" ];
+	"ric:Right" -> "ric:EnforcementProcedure" [ label = "ric:hasEnforcementProcedure" ];
+	"ric:Right" -> "a63921574fd88e29be53a872a23b6d3d" [ label = "ric:subjectTo" ];
+	"ric:Right" -> "ric:Exception" [ label = "ric:hasException" ];
+	"ric:Incident" -> "owl:Thing" [ label = "ric:hasTypeOfIncident" ];
+	"ric:Right" -> "ric:Constraint" [ label = "ric:hasConstraint" ];
+	"ric:Right" -> "ric:Incident" [ label = "ric:isTriggeredBy" ];
 
 }
