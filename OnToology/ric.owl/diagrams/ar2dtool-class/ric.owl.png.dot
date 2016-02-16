@@ -1,18 +1,18 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:Right" "base:Exception" "base:LegalSource" "base:EnforcementProcedure" "base:Passenger" "base:Constraint" "base:Requite" "base:AirTransportPassengerIncident" ; /*classes style*/
-	"base:hasTypeOfIncident" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
-	"https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric.owl" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
-	"base:hasException" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
-	"base:Passenger" -> "base:EnforcementProcedure" [ label = "base:followsProcedure" ];
-	"base:Right" -> "base:Requite" [ label = "base:hasRequisite" ];
-	"base:Passenger" -> "base:Right" [ label = "base:isEntitledTo" ];
-	"base:AirTransportPassengerIncident" -> "owl:Thing" [ label = "base:hasTypeOfIncident" ];
-	"base:Right" -> "base:LegalSource" [ label = "base:hasLegalSource" ];
-	"base:Right" -> "base:Constraint" [ label = "base:hasConstraint" ];
-	"base:Right" -> "base:Exception" [ label = "base:hasException" ];
-	"base:AirTransportPassengerIncident" -> "base:Right" [ label = "base:mayTrigger" ];
-	"base:Right" -> "base:EnforcementProcedure" [ label = "base:hasEnforcementProcedure" ];
+node [shape = rectangle, color="orange"]; "ric:Exception" "ric:Right" "ric:Constraint" "ric:LegalSource" "ric:Requisite" "ric:Incident" "ric:EnforcementProcedure" ; /*classes style*/
+	"ric:" -> "http://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
+	"ric:hasException" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ric:hasTypeOfIncident" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ric:Incident" -> "prov:Activity" [ label = "skos:closeMatch" ];
+	"ric:Constraint" -> "ric:LegalSource" [ label = "ric:hasLegalSource" ];
+	"ric:Right" -> "ric:Requisite" [ label = "ric:hasRequisite" ];
+	"ric:Right" -> "ric:EnforcementProcedure" [ label = "ric:hasEnforcementProcedure" ];
+	"ric:Right" -> "ric:Constraint" [ label = "ric:subjectTo" ];
+	"ric:Right" -> "ric:Exception" [ label = "ric:hasException" ];
+	"ric:Incident" -> "ric:Right" [ label = "ric:mayTrigger" ];
+	"ric:Incident" -> "owl:Thing" [ label = "ric:hasTypeOfIncident" ];
+	"ric:Right" -> "ric:Constraint" [ label = "ric:hasConstraint" ];
 
 }
