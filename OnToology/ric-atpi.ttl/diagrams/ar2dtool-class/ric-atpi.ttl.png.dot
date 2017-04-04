@@ -1,8 +1,23 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident" ; /*classes style*/
-	"https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owl" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
-	"https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlAirTransportPassengerIncident" -> "owl:Thing" [ label = "https://raw.githubusercontent.com/Rel-incode/ric-ontology/master/ric-atpi.owlhappensIn" ];
+node [shape = rectangle, color="orange"]; "base:AirTransportPassengerIncident" ; /*classes style*/
+	"base:fullyinformed" -> "base:regulation261rec20" [ label = "ric:hasLegalSource" ];
+	"base:righttoinformation" -> "base:limitationcare2" [ label = "ric:subjectTo" ];
+	"base:righttoinformation" -> "base:limitationcare" [ label = "ric:subjectTo" ];
+	"base:righttoinformation" -> "base:fullyinformed" [ label = "ric:subjectTo" ];
+	"base:righttoinformation" -> "base:regulation261art142" [ label = "ric:hasLegalSource" ];
+	"base:righttoinformation" -> "base:writtennotice" [ label = "ric:subjectTo" ];
+	"base:righttoinformation" -> "base:regulation261art52" [ label = "ric:hasLegalSource" ];
+	"base:righttoinformation" -> "base:territorialapplication" [ label = "ric:subjectTo" ];
+	"base:righttoinformation" -> "base:cancelledflight" [ label = "ric:isTriggeredBy" ];
+	"base:righttoinformation" -> "base:complainthandling" [ label = "ric:hasEnforcementProcedure" ];
+	"base:complainthandling" -> "http://ec.europa.eu/transport/themes/passengers/air/doc/complain_form/eu_complaint_form_en.pdf" [ label = "rdfs:seeAlso" ];
+	"base:" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dct:license" ];
+	"base:territorialapplication" -> "base:regulation261art31" [ label = "ric:hasLegalSource" ];
+	"base:limitationcare" -> "base:regulation261rec18" [ label = "ric:hasLegalSource" ];
+	"base:limitationcare2" -> "base:regulation261art31b" [ label = "ric:hasLegalSource" ];
+	"base:writtennotice" -> "base:regulation261art142" [ label = "ric:hasLegalSource" ];
+	"base:AirTransportPassengerIncident" -> "owl:Thing" [ label = "base:happensIn" ];
 
 }
